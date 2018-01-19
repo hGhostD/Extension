@@ -15,4 +15,12 @@ extension UIButton {
         imageView.center = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height / 2)
         self.addSubview(imageView)
     }
+    /// 设置白色 按钮
+    func setupWhiteStyle() {
+        self.layer.cornerRadius = 10
+        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor.white.cgColor
+        self.backgroundColor = K_Translucence
+        self.titleLabel?.textColor = .white
+    }
 }
