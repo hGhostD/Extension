@@ -12,6 +12,6 @@ extension UIScrollView {
     func setupDefault() {
         self.isPagingEnabled = true
         self.showsVerticalScrollIndicator = false
-        self.showsHorizontalScrollIndicator = true
+        self.showsHorizontalScrollIndicator = false
     }
 }

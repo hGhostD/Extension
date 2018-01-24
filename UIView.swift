@@ -12,12 +12,12 @@ extension UIView {
     var width: CGFloat { return self.frame.size.width }
     var height: CGFloat { return self.frame.size.height }
     /// 设置 UIView 阴影和圆角
-    func setShadow(_ color: UIColor = K_Shadow, _ cornerRadius: CGFloat = 10) {
+    func setShadow(_ color: UIColor = K_Shadow, _ cornerRadius: CGFloat = 10, _ shadowRadius: CGFloat = 10) {
         self.layer.cornerRadius = cornerRadius
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOpacity = 0.3
         self.layer.shadowOffset = CGSize(width: 0, height: 1)
-        self.layer.shadowRadius = cornerRadius
+        self.layer.shadowRadius = shadowRadius
     }
     /// 设置渐变颜色 从上至下渐变
     func setChangeColor(_ colorArr: [UIColor] = [K_BlueColor, K_BlueLight], radius: CGFloat = 0) {
