@@ -24,6 +24,13 @@ extension UIButton {
         self.backgroundColor = K_Translucence
         self.titleLabel?.textColor = .white
     }
+    /// 设置灰色 按钮
+    func setupGrayStyle() {
+        self.layer.cornerRadius = 10
+        self.layer.borderColor = K_BlackF5.cgColor
+        self.backgroundColor = K_BlackF5
+        self.setTitleColor(.black, for: .normal)
+    }
     /// 设置带图片和标题的按钮
     func setupImageAndTitle(image: UIImage, title: String, titleColor: UIColor = .black) {
         let width = self.width
@@ -38,5 +45,14 @@ extension UIButton {
         titleLabel.textAlignment = .center
         titleLabel.font = HY_Font(12)
         self.addSubview(titleLabel)
+    }
+    /// 蓝色完成大按钮
+    func createBlueBigButton(rect: CGRect, title: String) {
+        self.bounds = rect
+        self.setChangeColor(radius: 10)
+        self.setShadow()
+        self.setTitle(title, for: .normal)
+        self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        self.setTitleColor(.white, for: .normal)
     }
 }

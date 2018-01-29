@@ -125,6 +125,11 @@ extension UIAlertController {
             vc.preferredContentSize.height = height
             preferredContentSize.height = height
         }
+        
+        if let width = width {
+            vc.preferredContentSize.width = width
+            preferredContentSize.width = width
+        }
     }
 }
 

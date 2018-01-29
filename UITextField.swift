@@ -24,4 +24,11 @@ extension UITextField {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: value, height: self.height))
         self.leftView = view
     }
+    /// 设置灰色风格
+    func setupGrayStyle() {
+        self.layer.cornerRadius = 10
+        self.backgroundColor = K_BlackF5
+        self.textColor = .black
+    }
+    
 }
