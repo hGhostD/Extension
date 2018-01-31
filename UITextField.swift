@@ -30,5 +30,15 @@ extension UITextField {
         self.backgroundColor = K_BlackF5
         self.textColor = .black
     }
+    /// 设置左侧图标
+    func setupLeftImage(_ image: UIImage, leftSpace: CGFloat = 0) {
+        self.leftViewMode = .always
+        let spaceView = UIView(frame: CGRect(0, 0, 30 + leftSpace, self.height))
+        let imageView = UIImageView(image: image)
+        imageView.bounds = CGRect(0, 0, 20, 20)
+        imageView.center = CGPoint(x: 10 + leftSpace, y: self.height / 2)
+        spaceView.addSubview(imageView)
+        self.leftView = spaceView
+    }
     
 }
